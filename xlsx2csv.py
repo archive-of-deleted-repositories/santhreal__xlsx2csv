@@ -1067,8 +1067,7 @@ class Sheet:
             if len(self.columns.keys()) > 0:
                 if min(self.columns.keys()) < 0: # Weird
                     d = []
-                    keys = self.columns.keys()
-                    keys.sort()
+                    keys = sorted(self.columns.keys())
                     for k in keys:
                         val = self.columns[k]
                         if not self.py3:
